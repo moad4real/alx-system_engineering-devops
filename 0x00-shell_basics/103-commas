@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 --format=commas | sed ':a;N;$!ba;s/\n/, /g' ; echo
+ls -ap1 --format=commas | tr '\n' ', ' | sed 's/,$/\n/'
